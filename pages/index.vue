@@ -75,7 +75,6 @@
                         </v-col>
                         <v-col cols="12" sm="7">
                             <v-expansion-panels>
-                               
                                 <v-expansion-panel>
                                     <v-expansion-panel-header elevation="0">
                                         <h4>What is Life Insurance?</h4>
@@ -128,7 +127,7 @@
                 </v-row>
             </v-container>
         </section>
-        <section>
+        <section class="px-0">
             <v-row justify="space-around">
                 <v-col cols="10" sm="9" md="8">
                     <div class="text-center ">
@@ -138,7 +137,7 @@
                 </v-col>
             </v-row>
             <VueSlickCarousel class="my-10" v-bind="settings">
-                <div class="px-5 my-2">
+                <div class="px-md-5 my-2">
                     <v-card rounded="true" class="mx-auto py-4">
                         <v-card-text>
                             We were given a number of options and everything was explained really clearly. Any questions we had were answered really thoroughly and promptly. All in all a really good experience and would certainly recommend to others!
@@ -268,7 +267,7 @@ export default {
     color: orange;
 }
 section {
-    padding: 3em;
+    padding: 3em 0;
 }
 .bigUnderline {
     width: 15%;

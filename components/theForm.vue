@@ -115,7 +115,7 @@
                         <h2 class="mb-5 mt-3 text-center">Amount of cover required?</h2>
                         <v-row justify="center">
                             <v-col cols="10" md="6">
-                                <v-text-field :rules="[validationRules.required]" v-model="questions[key]" outlined prepend-inner-icon="£"></v-text-field>
+                                <v-text-field pattern="[0-9]{10}" :rules="[validationRules.required]" v-model="questions[key]" outlined prepend-inner-icon="£"></v-text-field>
                             </v-col>
                         </v-row>
                         <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
