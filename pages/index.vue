@@ -42,29 +42,29 @@
             </v-container>
         </section>
         <!-- <section class="lightgrey">
-            <v-container>
-                <v-row align="center">
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/x1200px-Legal__General_logo.svg_-e1552995755403.png.pagespeed.ic.uJnUAbBEwm.png"></v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xLiverpool-Vic.png.pagespeed.ic.SCcAclKXyP.png"></v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xvitality-logo-300x164.png.pagespeed.ic.iLqrgu_A9l.png"></v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xbarclays-logo-1-1-e1552651231625.png.pagespeed.ic.MGarkWd2gz.png"></v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xZurich_Logo_new.svg_-e1542193615983.png.pagespeed.ic.XnhxS1HDjd.png"></v-img>
-                    </v-col>
-                    <v-col>
-                        <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2019/02/xAEGON_logo.svg_-e1552648943402.png.pagespeed.ic.3V88J0fGHR.png"></v-img>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </section> -->
+                <v-container>
+                    <v-row align="center">
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/x1200px-Legal__General_logo.svg_-e1552995755403.png.pagespeed.ic.uJnUAbBEwm.png"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xLiverpool-Vic.png.pagespeed.ic.SCcAclKXyP.png"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xvitality-logo-300x164.png.pagespeed.ic.iLqrgu_A9l.png"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xbarclays-logo-1-1-e1552651231625.png.pagespeed.ic.MGarkWd2gz.png"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xZurich_Logo_new.svg_-e1542193615983.png.pagespeed.ic.XnhxS1HDjd.png"></v-img>
+                        </v-col>
+                        <v-col>
+                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2019/02/xAEGON_logo.svg_-e1552648943402.png.pagespeed.ic.3V88J0fGHR.png"></v-img>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </section> -->
         <section style="background: #0b3868 url('/blue-back1.jpg') left top no-repeat">
             <v-container>
                 <v-row>
@@ -178,7 +178,8 @@
                 <div class="px-5 my-2">
                     <v-card rounded="true" class="mx-auto py-4">
                         <v-card-text>
-                           I previously was insured with Zurich and was curious to see what my level of cover and premium faired, I spoke to Stacey who was great, she really knew her stuff and to my surprise I practically doubled the level of my cover for a slightly lower monthly direct debit, I couldn’t be happier and would recommend
+                            I previously was insured with Zurich and was curious to see what my level of cover and premium faired, I spoke to Stacey who was great, she really knew her stuff and to my surprise I practically doubled the level of my cover for a slightly lower monthly
+                            direct debit, I couldn’t be happier and would recommend
                         </v-card-text>
                         <v-list-item>
                             <v-list-item-content>
@@ -192,7 +193,7 @@
                 <v-img width="100" class="mx-auto" src="https://www.foreverprotect.com/wp-content/themes/forever-protect/img/xreview.png.pagespeed.ic.KGAg41OvVG.png"></v-img>
             </div>
         </section>
-        <section class="pt-0 lightgrey" >
+        <section class="pt-0 lightgrey">
             <v-container class="pt-16">
                 <v-row justify="space-around">
                     <v-col cols="11" sm="9" md="8">
@@ -227,8 +228,12 @@
                 </v-row>
             </v-container>
         </section>
+        <section class="primary text-center">
+            <v-btn class="secondary"  x-large flat rounded @click="toTop()">Apply today</v-btn>
+        </section>
     </div>
 </template>
+
 <script>
 import theForm from '~/components/theForm.vue'
 import VueSlickCarousel from 'vue-slick-carousel'
@@ -258,19 +263,27 @@ export default {
             },
         }
     },
+    methods: {
+        toTop() {
+            this.$vuetify.goTo(0)
+        },
+    },
     components: {
         theForm,
         VueSlickCarousel
     },
 }
 </script>
+
 <style lang="scss">
 .v-icon {
     color: orange;
 }
+
 section {
     padding: 3em 0;
 }
+
 .bigUnderline {
     width: 15%;
     background-color: #ff9800;
@@ -280,20 +293,24 @@ section {
     border-radius: 20px;
     max-width: 300px;
 }
+
 .v-expansion-panels {
     @media only screen and (min-width: 960px) {
         margin-top: 5em;
     }
 }
+
 .top-nudge {
     @media only screen and (min-width: 960px) {
         margin-top: 3em;
     }
 }
+
 .v-expansion-panel,
 .v-expansion-panel::before {
     box-shadow: none !important;
 }
+
 .white-text {
     color: #fff;
 }

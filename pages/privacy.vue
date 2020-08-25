@@ -6,6 +6,7 @@
         <v-container class="mt-5 py-16">
             <v-row>
                 <v-col cols="11" md="8" justify="center" class="offset-md-2">
+    
 
                     <p>We take data protection and your privacy very seriously at Foreveprotect.com. Here’s how we handle your information</p>
                     <p><strong>Last updated: 30.06.2020</strong></p>
