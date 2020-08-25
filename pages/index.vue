@@ -6,7 +6,9 @@
                 <h3>Affordable premiums from just £1.15 per week*</h3>
             </v-container>
         </header>
-        <theForm/>
+        <v-container>
+            <theForm/>
+        </v-container>
         <section class="pt-0">
             <v-container class="pt-16">
                 <v-row justify="space-around">
@@ -39,7 +41,7 @@
                 </v-row>
             </v-container>
         </section>
-        <section class="lightgrey">
+        <!-- <section class="lightgrey">
             <v-container>
                 <v-row align="center">
                     <v-col>
@@ -62,7 +64,7 @@
                     </v-col>
                 </v-row>
             </v-container>
-        </section>
+        </section> -->
         <section style="background: #0b3868 url('/blue-back1.jpg') left top no-repeat">
             <v-container>
                 <v-row>

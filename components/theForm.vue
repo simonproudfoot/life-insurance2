@@ -288,7 +288,7 @@
                         </v-col>
                     </v-row>
                 </template>
-                    <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
+                <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
                 </div>
             </v-form>
             </transition>
@@ -543,7 +543,7 @@ export default {
                 "dob": this.questions.dob.join('/'),
                 "consumer_ip_address": this.userIP
             }
-            const URL = window.location.href+"/sendData.php"
+            const URL = window.location.href+"sendData.php"
             console.log(this.encodeDataToURL(data).toString().replace(/[^\x20-\x7E]/g, ''))
             this.$axios.$post(URL + "?" + this.encodeDataToURL(data).toString().replace(/[^\x20-\x7E]/g, '')).then((response) => {
                 console.log(response.code);
