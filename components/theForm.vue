@@ -14,7 +14,7 @@
                                 <p class="button-label text-center mt-2">Just me</p>
                             </v-col>
                             <v-col>
-                                <v-btn height="80"  color="accent" x-large block @click="stepInner++, hasPartner(), toTop()">
+                                <v-btn height="80" color="accent" x-large block @click="stepInner++, hasPartner(), toTop()">
                                     <v-icon class="mdi-36px">mdi-human-male-female</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Me & my partner</p>
@@ -41,13 +41,13 @@
                         <h2 class="mb-5 mt-3 text-center">Have you smoked in the last 12 months?</h2>
                         <v-row>
                             <v-col>
-                                <v-btn height="80"  x-large block color="accent" @click="stepInner++, questions[key] = 'yes', toTop()">
+                                <v-btn height="80" x-large block color="accent" @click="stepInner++, questions[key] = 'yes', toTop()">
                                     <v-icon class="mdi-36px">mdi-smoking</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Yes</p>
                             </v-col>
                             <v-col>
-                                <v-btn height="80"  color="accent" x-large block @click="stepInner++, questions[key] = 'no', toTop()">
+                                <v-btn height="80" color="accent" x-large block @click="stepInner++, questions[key] = 'no', toTop()">
                                     <v-icon class="mdi-36px">mdi-smoking-off</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">No</p>
@@ -63,13 +63,13 @@
                         <h2 class="mb-5 mt-3 text-center">Critical illness cover?</h2>
                         <v-row>
                             <v-col>
-                                <v-btn height="80"  x-large block color="accent" @click="stepInner++, questions[key] = 'yes', toTop()">
+                                <v-btn height="80" x-large block color="accent" @click="stepInner++, questions[key] = 'yes', toTop()">
                                     <v-icon class="mdi-36px">mdi-check-circle-outline</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Yes</p>
                             </v-col>
                             <v-col>
-                                <v-btn height="80"  color="accent" x-large block @click="stepInner++, questions[key] = 'no', toTop()">
+                                <v-btn height="80" color="accent" x-large block @click="stepInner++, questions[key] = 'no', toTop()">
                                     <v-icon class="mdi-36px">mdi-close-circle-outline</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">No</p>
@@ -85,15 +85,15 @@
                         <h2 class="mb-5 mt-3 text-center">Type of insurance?</h2>
                         <v-row no-gutters>
                             <v-col cols="4" class="px-1">
-                                <v-btn height="80"  x-large block color="accent" @click="stepInner++, questions[key] = 'level term', toTop()">
+                                <v-btn height="80" x-large block color="accent" @click="stepInner++, questions[key] = 'level term', toTop()">
                                     <svg style="width:36px;height:36px" viewBox="0 0 24 24">
-                                            <path fill="currentColor" d="M12,2A9,9 0 0,1 21,11H13V19A3,3 0 0,1 10,22A3,3 0 0,1 7,19V18H9V19A1,1 0 0,0 10,20A1,1 0 0,0 11,19V11H3A9,9 0 0,1 12,2Z" />
-                                    </svg>
+                                                    <path fill="currentColor" d="M12,2A9,9 0 0,1 21,11H13V19A3,3 0 0,1 10,22A3,3 0 0,1 7,19V18H9V19A1,1 0 0,0 10,20A1,1 0 0,0 11,19V11H3A9,9 0 0,1 12,2Z" />
+                                            </svg>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Level term</p>
                             </v-col>
                             <v-col cols="4" class="px-1">
-                                <v-btn height="80"  color="accent" x-large block @click="stepInner++, questions[key] = 'mortgage', toTop()">
+                                <v-btn height="80" color="accent" x-large block @click="stepInner++, questions[key] = 'mortgage', toTop()">
                                     <v-icon class="mdi-36px">mdi-home</v-icon>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Mortgage</p>
@@ -111,11 +111,12 @@
             <!-- amount of cover required -->
             <transition name="fade">
                 <v-form v-on:submit.prevent v-model="isValid" v-if="key == 'amount_of_cover_required' && stepInner == index">
+                    {{prePopAmount}}
                     <div class="formSectionInner">
                         <h2 class="mb-5 mt-3 text-center">Amount of cover required?</h2>
                         <v-row justify="center">
                             <v-col cols="10" md="6">
-                                <v-text-field pattern="[0-9]{10}" :rules="[validationRules.required]" v-model="questions[key]" outlined prepend-inner-icon="£"></v-text-field>
+                                <v-select prepend-icon="£" v-model="questions[key]" :rules="[validationRules.required]" :items="coverAmounts" menu-props="auto" label="Select" single-line></v-select>
                             </v-col>
                         </v-row>
                         <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
@@ -125,11 +126,12 @@
             <!-- length_of_cover -->
             <transition name="fade">
                 <v-form v-on:submit.prevent v-model="isValid" v-if="key == 'length_of_cover' && stepInner == index">
+                     {{prePopLength}}
                     <div class="formSectionInner">
                         <h2 class="mb-5 mt-3 text-center">Length of cover?</h2>
                         <v-row justify="center">
                             <v-col cols="10" md="6">
-                                <v-select v-model="questions[key]" :rules="[validationRules.required]" :items="coverYears" menu-props="auto" label="Select"  single-line></v-select>
+                                <v-select v-model="questions[key]" :rules="[validationRules.required]" :items="coverYears" menu-props="auto" label="Select" single-line></v-select>
                             </v-col>
                         </v-row>
                         <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
@@ -239,7 +241,7 @@
             </transition>
             <!-- Address  -->
             <transition name="fade">
-            <v-form v-on:submit.prevent transition="fade-transition" v-if="key == 'address' && stepInner == index"  :rule="questions[key].length !== 0 ? isValid = true: isValid = false" >
+            <v-form v-on:submit.prevent transition="fade-transition" v-if="key == 'address' && stepInner == index"  :rule="questions[key].length !== 0 && questions[key].line_1 && questions[key].postcode && questions[key].post_town ? isValid = true: isValid = false" >
                 <div class="formSectionInner">
                     <h2 class="mb-5 mt-3 text-center">What is your address?</h2>
                     <v-row>
@@ -247,7 +249,7 @@
                             <input type="text" outlined v-model="searchPostcode" ref="postcodeField" class="addressLookup" :placeholder="!$vuetify.breakpoint.xs ? 'Please type your postcode' : 'Your postcode'" @change="requestAddress(key)">
                         </v-col>
                         <v-col cols="4">
-                            <v-btn @click="requestAddress(key)" color="primary" x-large block>Find</v-btn>
+                            <v-btn @keyup.enter="requestAddress(key)" @click="requestAddress(key)" color="primary" x-large block>Find</v-btn>
                         </v-col>
                     </v-row>
                     <br>
@@ -267,25 +269,25 @@
                             <v-divider></v-divider>
                         </v-card>
                     </v-dialog>
-                    <template v-if="questions[key]">
-                        <v-row class="addressDeets">
-                            <v-col cols="12" class="py-0">
-                                <v-text-field outlined type="text" v-model="questions[key].line_1" single-line label="Address line 1" />
-                            </v-col>
-                           <v-col cols="12" class="py-0">
-                                <v-text-field outlined type="text" v-model="questions[key].line_2" single-line label="Address line 2" />
-                            </v-col>
-                            <v-col cols="12" class="py-0">
-                                <v-text-field outlined type="text" v-model="questions[key].line_3" d single-line label="Address line 3" />
-                            </v-col>
-                            <v-col cols="12" class="py-0">
-                                <v-text-field outlined type="text" v-model="questions[key].post_town" d single-line label="Town/city" />
-                            </v-col>
-                            <v-col cols="12" class="py-0">
-                                <v-text-field outlined type="text" v-model="questions[key].postcode" single-line label="Postcode" />
-                            </v-col>
-                        </v-row>
-                    </template>
+                <template v-if="questions[key]">
+                    <v-row class="addressDeets">
+                        <v-col cols="12" class="py-0">
+                            <v-text-field outlined type="text" v-model="questions[key].line_1" single-line label="Address line 1" />
+                        </v-col>
+                        <v-col cols="12" class="py-0">
+                            <v-text-field outlined type="text" v-model="questions[key].line_2" single-line label="Address line 2" />
+                        </v-col>
+                        <v-col cols="12" class="py-0">
+                            <v-text-field outlined type="text" v-model="questions[key].line_3" d single-line label="Address line 3" />
+                        </v-col>
+                        <v-col cols="12" class="py-0">
+                            <v-text-field outlined type="text" v-model="questions[key].post_town" d single-line label="Town/city" />
+                        </v-col>
+                        <v-col cols="12" class="py-0">
+                            <v-text-field disabled outlined type="text" v-model="questions[key].postcode" single-line label="Postcode" />
+                        </v-col>
+                    </v-row>
+                </template>
                     <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
                 </div>
             </v-form>
@@ -302,17 +304,19 @@
                     {{submitError}}
                  </v-alert>
                  <p class="mt-5">By clicking <i>"Get my Free Quote"</i> you agree to be contacted by telephone or email by Promis Life, an FCA Authorised Firm, and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
-                <!-- <v-checkbox v-model="contactTicked">
-                    <template v-slot:label>
-                        <div> would like to use email, text and display notifications to let you know about <b>forever-protect-over-50.com</b> products and services. If you do not want to receive these, un-tick this box.
-                        <v-tooltip bottom>
-                            <template v-slot:activator="{ on }">
-                                <a target="_blank"  href="http://vuetifyjs.com" @click.stop v-on="on" ></a>
-                            </template>
+                <!-- 
+                <v-checkbox v-model="contactTicked">
+                        <template v-slot:label>
+                            <div> would like to use email, text and display notifications to let you know about <b>forever-protect-over-50.com</b> products and services. If you do not want to receive these, un-tick this box.
+                                <v-tooltip bottom>
+                                    <template v-slot:activator="{ on }">
+                                    <a target="_blank"  href="http://vuetifyjs.com" @click.stop v-on="on" ></a>
+                        </template>
                         </v-tooltip>
                     </div>
                 </template>
-                </v-checkbox> -->
+                </v-checkbox> 
+                -->
             </div>
         </transition>
         </div>
@@ -341,6 +345,81 @@ export default {
                 success: false,
             },
             userIP: '',
+            coverAmounts: [
+                "100,000",
+                "25,000",
+                "30,000",
+                "35,000",
+                "40,000",
+                "45,000",
+                "50,000",
+                "55,000",
+                "60,000",
+                "65,000",
+                "70,000",
+                "75,000",
+                "80,000",
+                "85,000",
+                "90,000",
+                "95,000",
+                "100,000",
+                "105,000",
+                "110,000",
+                "115,000",
+                "120,000",
+                "125,000",
+                "130,000",
+                "135,000",
+                "140,000",
+                "145,000",
+                "150,000",
+                "155,000",
+                "160,000",
+                "165,000",
+                "170,000",
+                "175,000",
+                "180,000",
+                "185,000",
+                "190,000",
+                "195,000",
+                "200,000",
+                "210,000",
+                "220,000",
+                "230,000",
+                "240,000",
+                "250,000",
+                "260,000",
+                "270,000",
+                "280,000",
+                "290,000",
+                "300,000",
+                "325,000",
+                "350,000",
+                "375,000",
+                "400,000",
+                "425,000",
+                "450,000",
+                "475,000",
+                "500,000",
+                "525,000",
+                "550,000",
+                "575,000",
+                "600,000",
+                "650,000",
+                "700,000",
+                "750,000",
+                "800,000",
+                "850,000",
+                "900,000",
+                "950,000",
+                "1,000,000",
+                "1,100,000",
+                "1,200,000",
+                "1,300,000",
+                "1,400,000",
+                "1,500,000",
+
+            ],
             searchTelephone: '',
             searchPostcode: '',
             phoneValidated: null,
@@ -363,7 +442,7 @@ export default {
                 counter: (value) => !!value.length <= 11 || "Min 11 numbers",
                 email: [
                     (v) => !!v || "E-mail is required",
-                    (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+                    (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) || "E-mail must be valid",
                 ],
                 telephoneRules: [
                     (v) => !!v || "Required",
@@ -464,7 +543,7 @@ export default {
                 "dob": this.questions.dob.join('/'),
                 "consumer_ip_address": this.userIP
             }
-            const URL = "https://forever-protect-over-50.com/sendData.php"
+            const URL = window.location.href+"/sendData.php"
             console.log(this.encodeDataToURL(data).toString().replace(/[^\x20-\x7E]/g, ''))
             this.$axios.$post(URL + "?" + this.encodeDataToURL(data).toString().replace(/[^\x20-\x7E]/g, '')).then((response) => {
                 console.log(response.code);
@@ -472,13 +551,16 @@ export default {
             }).catch(function(error) {
                 console.log(error);
             });
+        },
+        numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
     },
     computed: {
-        coverYears(){
+        coverYears() {
             var x = []
             for (let year = 1; year < 50; year++) {
-                x.push(year+' years')
+                x.push(year + ' years')
             }
             return x
         },
@@ -487,6 +569,12 @@ export default {
         },
         prePopDob() {
             this.questions.dob = [] ? this.questions.dob = [1, 1, 1969] : null;
+        },
+        prePopAmount() {
+            this.questions.amount_of_cover_required = [] ? this.questions.amount_of_cover_required = "1,500,000" : null;
+        },
+        prePopLength() {
+            this.questions.length_of_cover = [] ? this.questions.length_of_cover = "20 years" : null;
         },
         ageCheck() {
             var today_date = new Date();
@@ -551,7 +639,6 @@ export default {
         }
     },
     mounted() {
-        // get user IP
         fetch('https://api.ipify.org?format=json')
             .then(x => x.json()).then(({ ip }) => {
                 this.userIP = ip;
@@ -692,7 +779,8 @@ export default {
 .btnBck {
     border-top: 1px #e3e3e3 solid;
 }
-.v-text-field__details{
+
+.v-text-field__details {
     min-height: 0;
 }
 
