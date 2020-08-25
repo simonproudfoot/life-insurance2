@@ -648,6 +648,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+
+
 .button-label {
     @media only screen and (max-width: 600px) {
         font-size: 15px;

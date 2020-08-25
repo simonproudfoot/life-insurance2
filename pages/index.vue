@@ -297,4 +297,8 @@ section {
 .white-text {
     color: #fff;
 }
+
+.v-application {
+    overflow-x: hidden;
+}
 </style>
