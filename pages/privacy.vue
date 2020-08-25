@@ -6,190 +6,93 @@
         <v-container class="mt-5 py-16">
             <v-row>
                 <v-col cols="11" md="8" justify="center" class="offset-md-2">
-                    <a href="#p1">1. Background</a><br>
-                    <a href="#p2">2. How Our Website Works</a><br>
-                    <a href="#p3">3. Information about Veriform Ltd</a><br>
-                    <a href="#p4">4. What Does This Notice Cover?</a><br>
-                    <a href="#p5">5. What Is Personal Data?</a><br>
-                    <a href="#p6">6. What Are My Rights</a><br>
-                    <a href="#p7">7. What Personal Data Do We Collect?</a><br>
-                    <a href="#p8">8. How Do You Use My Personal Data?</a><br>
-                    <a href="#p9">9. How Long Will You Keep My Personal Data?</a><br>
-                    <a href="#p10">10. What Are Cookies And How Do We Use Them?</a><br>
-                    <a href="#p11">11. How And Where Do You Store Or Transfer My Personal Data?</a><br>
-                    <a href="#p12">12. Do You Share My Personal Data?</a><br>
-                    <a href="#p13">13. How Can I Access My Personal Data?</a><br>
-                    <a href="#p14">14. How Do I Contact You?</a><br>
-                    <a href="#p15">15. Changes To This Privacy Notice.</a><br>
-                    <a href="#p16">16. Copyright</a></b>
-                    </p>
-                    <h3 id="p1">1. Background.</h3>
-                    <p>This Privacy Policy explains how we use your personal data: how it is collected, how it is held, and how it is processed. It also explains your rights under the law relating to your personal data.</p>
-                    <p>Veriform Ltd (“We”, “Us”, “Our”) understands that your privacy is important to you and that you care about how your personal data is used. We respect and value the privacy of all of our customers and will only collect and use personal
-                        data in ways that are described here, and in a way that is consistent with our obligations and your rights under the law.</p>
-                    <p>You have certain rights in relation to your data, including the right to object to processing based on legitimate interests, profiling, and direct marketing. You can exercise your rights at any time by emailing us at info@veriform.co.uk.
-                        For further details about our processing and your rights, please see below.</p>
-                    <h3 id="p2">2. How Our Website Works</h3>
-                    <p>If you’d like to request and receive quotes or information for any of our products, you will need to complete and submit the form on any of our websites.</p>
-                    <p>Once we’ve received your request, we’ll connect you with one or more relevant Life Insurance Clients (depending on the specific permissions you have given us). We’ll tell the Client who you are, and your product requirements, and they’ll
-                        then contact you directly to discuss your requirements and potentially provide you with a quote.</p>
-                    <p>You’ll see on any of our websites that we have a clear consent statement. This statement sets out the Life Insurance Clients that will contact you.</p>
-                    <p>You can choose which Life Insurance Clients to buy from but you are not obliged to purchase from any of them.</p>
-                    <p>We don’t work with any Life Insurance Clients until we have a legal contract in place and have completed a detailed due diligence process. This is to ensure that they respect your data and rights by keeping your data secure and confidential,
-                        limiting their use of your data (i.e. to providing you with the requested information), and not sharing your data with anyone else.</p>
-                    <h3 id="p3">3. Information About Veriform Ltd.</h3>
-                    <p>Limited Liability Company registered in England under company number 07195400.</p>
-                    <p>Registered address: 145/147 Hatfield Road, St. Albans, Hertfordshire, AL1 4JY.</p>
-                    <p>Main trading address: Monaco House, Station Road, Kings Langley, Hertfordshire, WD4 8LQ.</p>
-                    <p>Email address: info@veriform.co.uk</p>
-                    <p>Telephone number: 01923 277 940</p>
-                    <p>ICO Registration Number: Z2350000</p>
-                    <p>FCA Authorisation Number: 690199</p>
-                    <h3 id="p4">4. What Does This Notice Cover?</h3>
-                    <p>This Privacy Information explains how we use your personal data: how it is collected, how it is held, and how it is processed. It also explains your rights under the law relating to your personal data.</p>
-                    <h3 id="p5">5. What Is Personal Data?</h3>
-                    <p>Personal data is defined by the General Data Protection Regulation (EU Regulation 2016/679) (the “GDPR”) as ‘any information relating to an identifiable person who can be directly or indirectly identified in particular by reference to
-                        an identifier’.</p>
-                    <p>Personal data is, in simpler terms, any information about you that enables you to be identified. Personal data covers obvious information such as your name and contact details, but it also covers less obvious information such as identification
-                        numbers, electronic location data, and other online identifiers.</p>
-                    <p>The personal data that we use is set out in Part 6, below.</p>
-                    <h3 id="p6">6. What Are My Rights?</h3>
-                    <p>Under the GDPR, you have the following rights, which we will always work to uphold:</p>
+
+                    <p>We take data protection and your privacy very seriously at Foreveprotect.com. Here’s how we handle your information</p>
+                    <p><strong>Last updated: 30.06.2020</strong></p>
+                    <p>This privacy notice aims to give you information on how foreverprotect.com collects and processes your personal data through your use of this website, including any data you may provide when you submit our online contact form.</p>
+                    <p>It is important that you read this privacy notice so that you are fully aware of how and why we are using your data.</p>
+                    <h2>1. Who We Are</h2>
+                    <p><strong>Data Controller:</strong></p>
+                    <p>Foreverprotect.com, 7783098 is the data controller and responsible for your personal data (collectively referred to as “4MM”, “media-maze.co.uk”, “we”, “us” or “our” in this privacy notice.</p>
+                    <p>We are a registered data controller with the Information Commissioner’s Office, registration number Z314122X</p>
+                    <p><strong>Contact Details:</strong></p>
+                    <p>Name: media-maze.co.uk</p>
+                    <p>Email address: info@media-maze.co.uk</p>
+                    <p>Postal address: 1st Floor Offices, The ACC, Market Street, Altrincham, WA14 1PF</p>
+                    <h2>2. The Data We Collect About You</h2>
+                    <p>Personal data, or personal information, means any information about an individual from which that person can be identified. It does not include data where the identity has been removed (anonymous data).<br> We may collect, use, store and
+                        transfer different kinds of personal data about you which we have grouped together as follows:</p>
                     <ul>
-                        <li>The right to be informed about our collection and use of your personal data. This Privacy Notice should tell you everything you need to know, but you can always contact us to find out more or to ask any questions using the details
-                            in Part 11.
-                        </li>
-                        <li>The right to access the personal data we hold about you. Part 10 will tell you how to do this.
-                        </li>
-                        <li>The right to have your personal data rectified if any of your personal data held by us is inaccurate or incomplete. Please contact us using the details in Part 11 to find out more.
-                        </li>
-                        <li>The right to erasure, i.e. the right to ask us to delete or otherwise dispose of any of your personal data that we have, subject to terms and conditions. Please contact us using the details in Part 11 to find out more.
-                        </li>
-                        <li>The right to restrict (i.e. prevent) the processing of your personal data.
-                        </li>
-                        <li>The right to object to us using your personal data for a particular purpose or purposes.
-                        </li>
-                        <li>The right to data portability. This means that, if you have provided personal data to us directly, we am using it with your consent or for the performance of a contract, and that data is processed using automated means, you can ask
-                            for a copy of that personal data to re-use with another service or business in many cases.
-                        </li>
-                        <li>Rights relating to automated decision-making and profiling. We do not use your personal data in this way.</li>
+                        <li>Identity Data includes first name and last name.</li>
+                        <li>Contact Data includes address, email address and telephone number(s).</li>
+                        <li>Technical Data includes internet protocol (IP) address, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you use to access
+                            this website.</li>
+                        <li>Product Data includes form responses (the data entered and selected within our online contact form).</li>
+                        <li>Usage Data includes information about how you use our website.</li>
                     </ul>
-                    <p>For more information about our use of your personal data or exercising your rights as outlined above, please contact us using the details provided in Part 13.</p>
-                    <p>Further information about your rights can also be obtained from the Information Commissioner’s Office or your local Citizens Advice Bureau.</p>
-                    <p>If you have any cause for complaint about our use of your personal data, you have the right to lodge a complaint with the Information Commissioner’s Office. You can find the relevant contact details and the best way to make a complaint
-                        to the ICO at www.ico.org.uk.</p>
-                    <h3 id="p7">7. What Personal Data Do You Collect?</h3>
-                    <p>In order to provide you with our service we pass your details on to one of our Life Insurance Clients so they can contact you by phone and provide you with more information or a quote for Life Insurance. We do not knowingly, deliberately
-                        or aim to, collect personal data from children under the age of 18, either for registration or for marketing purposes. If you are 18 or over we may collect some or all of the following personal data (this may vary according to your
-                        relationship with us). From time to time, we may change our websites, and so they may ask you for other information. It will always be clear from the website what information we’re requesting, and we only request information that is
-                        relevant to your request, and the service that we’re providing</p>
+                    <p>We also collect, use and share Aggregated Data such as statistical or demographic data for any purpose. Aggregated Data may be derived from your personal data but is not considered personal data in law as this data does not directly or
+                        indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific website feature. However, if we combine or connect Aggregated Data with your personal data so
+                        that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this privacy notice.</p>
+                    <p>We do not collect any Special Categories of Personal Data about you (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information
+                        about your health and genetic and biometric data). Nor do we collect any information about criminal convictions and offences.</p>
+                    <p>3. How We Collect Your Personal Data<br> We use different methods to collect data from and about you including through:</p>
                     <ul>
-                        <li>Full name</li>
-                        <li>Title</li>
-                        <li>Date of birth</li>
-                        <li>Gender</li>
-                        <li>Address</li>
-                        <li>Email address</li>
-                        <li>Telephone number</li>
-                        <li>Information about your preferences and interests</li>
-                        <li>Demographic information</li>
-                        <li>Your IP Address. We store IP addresses in order to stop unwanted traffic (i.e. spam) to our website. For example, if we become aware that spam is coming from a particular IP address (i.e. computer or location), we can block that IP
-                            address.
-                        </li>
-                        <li>Cookies</li>
+                        <li>Direct interactions. You may give us your Identity, Contact and Marketing and</li>
+                        <li>Communications Data by filling in forms or by corresponding with us by post, phone, email or otherwise.</li>
+                        <li>Automated technologies or interactions. As you interact with our website, we may automatically collect Technical Data about your equipment, browsing actions and patterns. We collect this personal data by using cookies, pixels, server
+                            logs and other similar technologies. Please see our cookie policy for further details.</li>
+                        <li>Technical Data from analytics providers such as Google</li>
                     </ul>
-                    <p>We do not knowingly, deliberately or aim to, collect personal data from children under the age of 18, either for registration or for marketing purposes.</p>
-                    <p>We collect your personal data in a number of ways:</p>
-                    <p>(a) When you fill in a website form on any of our websites. These are;<br> Life Insurance Quoter<br> Insure Quotes</p>
-                    <p>(b) When you write to us to enter a competition, prize-draw, or make an information request;</p>
-                    <p>(c) When you provide personal data on any area of our websites;</p>
-                    <p>(d) When you get in touch with us by email, social media, telephone, writing, and any other means;</p>
-                    <p>(e) When you subscribe to our services to receive communications from us about products and services e.g. by a newsletter, through social media etc.; and</p>
-                    <p>(f) Participate in a survey, market research, competition and/or or prize-draw on any of our websites.</p>
-                    <h3 id="p8">8. How Do You Use My Personal Data?</h3>
-                    <p>Under the GDPR, we must always have a lawful basis for using personal data. This may be because the data is necessary for our performance of a contract with you, because you have consented to our use of your personal data, or because it
-                        is in our legitimate business interests to use it. We collect for personal information in order to provide you with our service and pass your details on to one of our Life Insurance Clients so they can contact you by phone and provide
-                        you with more information or a quote for Life Insurance. The information we hold is held securely within an encrypted database and we will only ever transfer your data in a secure way.</p>
-                    <p>We take the protection of this data very seriously and will only routinely share data via secure systems with relevant Life Insurance Clients, to progress and conclude enquiries. We may, on occasion, also be legally required to share data
-                        with regulatory bodies, including the Ministry of Justice, the Financial Ombudsman Service, the Legal Ombudsman and the Information Commissioner’s Office.</p>
-                    <p>Your personal data may be used for one of the following purposes under a legitimate interest or consent basis. The method of communication will be by telephone. The method of communication will be determined by the consent you have provided.</p>
-                    <ul> &nbsp;
-                        <li>To manage your registration on our websites;</li>
-                        <li>Determine whether any of the Life Insurance Clients or approved partners we work with may have services, products and offers that may be of interest to you based on the preferences and permissions you have supplied to us; and</li>
-                        <li>With consent, communicate your data to our trusted partners and Life Insurance Clients. You may object to this processing at any time by contacting us on the details provided in Part 14 below. </li>
-                        <li>Improve and personalise our website to you, and this could be where we may market directly to you, about other relevant offers that may be of interest to you based on your preferences;</li>
-                        <li>Depending on the consents that you have provided and what personal data we hold about you, we may pass your personal data to website sponsors or brand partners (third parties) who may contact you by telephone for direct marketing purposes.</li>
-                        <li>For analysis purposes. Where this is done, the information is aggregated and wherever possible anonymised in line with the ICO’s code of practice. These products are of a marketing nature.</li>
-                        <li>We may process your personal data ourselves or through third party data processors that will process data on our behalf. We ensure the data processor complies with this policy and all current data protection regulations.</li>
-                        <li>Your information will only be released to third parties where you have given your explicit consent, at the time of registering your interest on any of our websites allowing you to fully understand what you are consenting to.</li>
-                        <li>If you consent to a call from one of our sponsors or brand partners this will override the TPS.</li>
+                    <h2>4. How We Use Your Personal Data</h2>
+                    <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                    <p>• Where we need to effectively perform the service you require<br> • Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</p>
+                    <p><strong>Our lawful basis for processing your general personal data:</strong></p>
+                    <p>Legitimate interests: The processing necessary for the purposes of the legitimate interests of the data controller or a third party, except where such interests are overridden by the interests or fundamental rights or freedoms of the data
+                        subject Data used for the purpose of providing the introduction to an FCA authorised broker or Funeral Plan provider, in order to provide the service requested by the data subject.</p>
+                    <h2>5. Sharing of Your Personal Data</h2>
+                    <p>We may have to share your personal data with the parties set out below for the purposes set out in our lawful basis for the processing of your general person data:</p>
+                    <ul>
+                        <li>FCA authorised Financial Technology (FinTech) companies acting as data processors, joint data controllers or independent data controllers who provide the introduction to FCA authorised brokers by means of IT and system services which
+                            may be based on the data you have provided.</li>
+                        <li>FCA authorised insurance brokers acting as data processors, joint data controllers or independent data controllers in order to provide the services required.</li>
+                        <li>Funeral plan providers acting as data processors, joint data controllers or independent data controllers in order to provide the services required.</li>
                     </ul>
-                    <p>The legitimate interests can be your interests or our interests. They can include commercial interests, individual interests or broader societal benefits but we need to be able to identify a legitimate interest; show that the processing
-                        is necessary to achieve it; and balance it against your interests, rights and freedoms.</p>
-                    <p>With your permission and/or where permitted by law, we may also use your personal data for marketing purposes, which may include contacting you by telephone with information, news, and offers on our products and services. You will not
-                        be sent any unlawful marketing or spam. We will always work to fully protect your rights and comply with our obligations under the GDPR and the Privacy and Electronic Communications (EC Directive) Regulations 2003, and you always have
-                        the opportunity to opt-out.</p>
-                    <p>We only ever send personal information to 3rd parties where you have given consent to do so. To prevent fraud and to ensure data accuracy it is necessary to submit your information for verification and filtering. This enables us to provide
-                        our services to you, and fulfil our legal obligations. We will take reasonable technical and organisational precautions to prevent the loss, misuse or alteration of your personal information. We will store all the personal information
-                        you provide on our secure servers that are subject to strict security requirements.</p>
-                    <p>From time to time, Service Providers may return data to us. They may do this if they have a query regarding a request for Quotes that we have sent to them in order to enable us to resolve the query. They may also return data to us, together
-                        with confirmation on whether or not a product has been purchased, in order to enable us to improve our marketing.</p>
-                    <h3 id="p9">9. How Long Will You Keep My Personal Data?</h3>
-                    <p>We have a data retention policy, which clearly sets out how long we keep data for, and for what reasons. We will not keep your personal data for any longer than is necessary in light of the reasons for which it was first collected. Your
-                        personal data will therefore be kept for the following periods:</p>
-                    <p>We will keep your contact details following an enquiry to any of our websites for a period of 6 months. After 6 months your personal information is placed in a suppression file for a further 18 months. We need to do this to ensure you
-                        do not receive any further communication from us or from any of our partners if your information has been supplied to them previously.</p>
-                    <p>This enables us to provide our services to you, and fulfil our legal obligations. We will take reasonable technical and organisational precautions to prevent the loss, misuse or alteration of your personal information. We will store all
-                        the personal information you provide on our secure servers that are subject to strict security requirements.</p>
-                    <h3 id="p10">10. What Are Cookies And How Do We Use Them?</h3>
-                    <p>Some of our websites may use cookies to collect information. You will be given a Cookie notification bar when you first visit any of our sites where your permission will be requested if that particular website uses Cookies. Cookies are
-                        small data files which are placed on your computer or other mobile or handheld device (such as smart ‘phones or ‘tablets’), as you browse our websites. They are used to ‘remember’ when your computer or device accesses our websites.
-                        We do not use cookies to collect or record information on users’ name, address or other contact details. The cookies stored on your computer or other device when you access our websites are set by us and other third parties. Cookies
-                        may also be set by third parties who we use for marketing. None of these third parties collect any personal data from which they would be able to identify individual customers. The main purposes for which cookies are used are:</p>
-                    <p>For technical purposes essential to effective operation of websites.</p>
-                    <p>To drive marketing, particularly banner advertisements and targeted updates.</p>
-                    <p>How do I disable Cookies?</p>
-                    <p>If you want to disable cookies you need to change your website browser settings to reject cookies. How to do this will depend on the browser you use, and we provide further detail below on how to disable cookies for the most popular browsers:</p>
-                    <p>For Microsoft Internet Explorer:<br> Choose the menu “tools” then “Internet Options”<br> Click on the “privacy” tab<br> Select the setting the appropriate setting</p>
-                    <p>For Mozilla Firefox:<br> Choose the menu “Tools” then “Options”<br> Click on the icon “Privacy”<br> Find the menu “Cookie” and select the relevant options</p>
-                    <p>For Opera 6.0 and further:<br> Choose the menu “Files” &gt; “Preferences”<br> Privacy
-                    </p>
-                    <p>What will happen if I disable Cookies?<br>
-                    </p>
-                    <p>This depends on which cookies you disable. However, in general the website may not operate effectively if cookies are deactivated.</p>
-                    <h3 id="p11">11. How And Where Do You Store Or Transfer My Personal Data?</h3>
-                    <p>We will only store or transfer your personal data within the European Economic Area (the “EEA”). The EEA consists of all EU member states, plus Norway, Iceland, and Liechtenstein. This means that your personal data will be fully protected
-                        under the GDPR or to equivalent standards by law.</p>
-                    <h3 id="p12">12. Do You Share My Personal Data?</h3>
-                    <p>We will only share some or all of your personal data with select third parties. We will always ask for your consent before doing so and this is entirely your choice.</p>
-                    <p>In some limited circumstances, we may be legally required to share certain personal data, which might include yours, if we are involved in legal proceedings or complying with legal obligations, a court order, or the instructions of a government
-                        authority.
-                    </p>
-                    <p>If any of your personal data is required by a third party, as described above, we will take steps to ensure that your personal data is handled safely, securely, and in accordance with your rights, our obligations, and the third party’s
-                        obligations under the law, as described above in Part 8.</p>
-                    <p><b>Our Life Insurance Clients;</b><br> Global Life Distribution (UK) Limited - Registration Number 08933807<br> Global Life Distribution (UK) Ltd trading as Promis Life<br></p>
-                    <p><b>Our Data Processing Partners;</b><br> The Read Group<br> Liquid 11<br> Selectabase
-                        <br> Brite Verify</p>
-                    <p>
-                    </p>
-                    <h3 id="p13">13. How Can I Access My Personal Data?</h3>
-                    <p>If you want to know what personal data we have about you, you can ask us for details of that personal data and for a copy of it (where any such personal data is held). This is known as a “subject access request”.</p>
-                    <p>All subject access requests should be made in writing and sent to the email or postal addresses shown in Part 11. To make this as easy as possible for you, a Subject Access Request Form is available for you to use. You do not have to use
-                        this form, but it is the easiest way to tell us everything we need to know to respond to your request as quickly as possible.</p>
-                    <p>There is not normally any charge for a subject access request. If your request is ‘manifestly unfounded or excessive’ (for example, if you make repetitive requests) a fee may be charged to cover our administrative costs in responding.</p>
-                    <p>We will respond to your subject access request within 28 day’s and, in any case, not more than one month of receiving it. Normally, we aim to provide a complete response, including a copy of your personal data within that time. In some
-                        cases, however, particularly if your request is more complex, more time may be required up to a maximum of three months from the date we receive your request.</p>
-                    <p>You will be kept fully informed of our progress.</p>
-                    <h3 id="p14">14. How Do I Contact You?</h3>
-                    <p>To contact us about anything to do with your personal data and data protection, including to make a subject access request, please use the following details (for the attention of): Data Protection Officer Main trading address: Monaco House,
-                        Station Road, Kings Langley, Hertfordshire, WD4 8LQ.</p>
-                    <p>Email address: info@veriform.co.uk</p>
-                    <p>Telephone number: 01923 277 940</p>
-                    <h3 id="p15">15. Changes To This Privacy Notice.</h3>
-                    <p>We may change this Privacy Notice from time to time. This may be necessary, for example, if the law changes, or if we change our business in a way that affects personal data protection.</p>
-                    <p>Any changes will be made available by posting a new version on our website. You should check this page occasionally to ensure you are happy with any changes, although anything that will affect you will be communicated directly to you.</p>
-                    <h3 id="p16">16. Copyright</h3>
-                    <p>You may download, print extracts and/or make copies of works on any of our websites for your own personal and non-commercial use, providing you acknowledge Veriform Ltd as the source of the information and include a link to our website.</p>
+                    <h2>6. Your Legal Rights and Your Personal Data</h2>
+                    <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data. You have the right to:</p>
+                    <ul>
+                        <li>Request access to your personal data (commonly known as a “data subject access request”). This enables you to receive a copy of the personal data we hold about you and to check that we are lawfully processing it.</li>
+                        <li>Request correction of the personal data that we hold about you. This enables you to have any incomplete or inaccurate data we hold about you corrected, though we may need to verify the accuracy of the new data you provide to us.</li>
+                        <li>Request erasure of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it. You also have the right to ask us to delete or remove your personal
+                            data where you have successfully exercised your right to object to processing (see below), where we may have processed your information unlawfully or where we are required to erase your personal data to comply with local law.</li>
+                        <li>Object to processing of your personal data where we are relying on a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground
+                            as you feel it impacts on your fundamental rights and freedoms. You also have the right to object where we are processing your personal data for direct marketing purposes. In some cases, we may demonstrate that we have compelling
+                            legitimate grounds to process your information which override your rights and freedoms.</li>
+                        <li>Request restriction of processing your personal data. This enables you to ask us to suspend the processing of your personal data in the following scenarios: (a) if you want us to establish the data’s accuracy; (b) where our use of
+                            the data is unlawful but you do not want us to erase it; (c) where you need us to hold the data even if we no longer require it as you need it to establish, exercise or defend legal claims; or (d) you have objected to our use of
+                            your data but we need to verify whether we have overriding legitimate grounds to use it.</li>
+                        <li>Request transfer of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies
+                            to automated information which you initially provided consent for us to use or where we used the information to perform a contract with you.</li>
+                    </ul>
+                    <p>If you wish to exercise any of the rights set out above, please contact info@media-maze.co.uk for further details.</p>
+                    <h2>7. Data Security</h2>
+                    <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorised way, altered or disclosed. In addition, we limit access to your personal data to those employees,
+                        agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
+                    <p>We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
+                    <h2>8. Data Retention</h2>
+                    <p>We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+                    <p>To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorised use or disclosure of your personal data, the purposes for
+                        which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal requirements.</p>
+                    <h2>9. Data Transfers to Third Countries</h2>
+                    <p>The data we collect from you may, on occasion, be stored and/or processed at a destination outside the European Economic Area (EEA). It may also be processed by organisations operating outside the EEA who work for us or for one of our
+                        suppliers. These organisations may be engaged in the fulfilment of your request, order or reservation, and the provision of support services.</p>
+                    <p>Where we use certain service providers, we may use specific contracts approved by the European Commission which give personal data the same protection it has in Europe.</p>
+                    <p>Where we use providers based in the US, we may transfer data to them if they are part of the Privacy Shield which requires them to provide similar protection to personal data shared between the Europe and the US.</p>
+                    <p>We will take steps reasonably necessary to ensure there is an adequate level of protection of your data and that your data is treated securely and in accordance with our Privacy Policy.</p>
+                    <h2>10. Cookies</h2>
+                    <p>Please refer to our <strong><a href="https://www.foreverprotect.com/cookies/">Cookies Page</a></strong> for more details.</p>
+                    <h2>11. How to Make A Complaint</h2>
+                    <p>To exercise all relevant rights, queries or complaints, please contact us at info@media-maze.co.uk to discuss your concerns.</p>
+                    <p>Following this, if you are still dissatisfied, you are able to contact the Information Commissioner’s Office directly at https://ico.org.uk/</p>
                 </v-col>
             </v-row>
         </v-container>

@@ -303,7 +303,7 @@
                  <v-alert class="mt-5" v-if="submitError" type="error">
                     {{submitError}}
                  </v-alert>
-                 <p class="mt-5">By clicking <i>"Get my Free Quote"</i> you agree to be contacted by telephone or email by Promis Life, an FCA Authorised Firm, and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
+                 <p class="mt-5">By clicking <i>"Get my quotes"</i> you agree to be contacted by email or telephone by an FCA authorised insurance firm and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
                 <!-- 
                 <v-checkbox v-model="contactTicked">
                         <template v-slot:label>
@@ -571,7 +571,7 @@ export default {
             this.questions.dob = [] ? this.questions.dob = [1, 1, 1969] : null;
         },
         prePopAmount() {
-            this.questions.amount_of_cover_required = [] ? this.questions.amount_of_cover_required = "1,500,000" : null;
+            this.questions.amount_of_cover_required = [] ? this.questions.amount_of_cover_required = "100,000" : null;
         },
         prePopLength() {
             this.questions.length_of_cover = [] ? this.questions.length_of_cover = "20 years" : null;
@@ -648,9 +648,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-
-
 .button-label {
     @media only screen and (max-width: 600px) {
         font-size: 15px;

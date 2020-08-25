@@ -8,22 +8,23 @@
             <nuxt />
         </v-main>
         <v-footer class="dark">
-            <div class="container">
+            <div class="container text-">
                 <div class="row">
-                    <div class="col-md-4 copy text-left">
-                        <p class="white-text"><small>forever-protect-over-50.com  © {{year}}. All Rights Reserved.</small></p>
+                    <div class="col-md-7 white-text">
+                        <p><small>Forever Protect is a site that helps customers compare life insurance policies available based on their individual requirements. Our partners are FCA licensed experts and provide quotes based on the information you submit to us. Our service is free, with no obligation to commit to buying an insurance policy.</small></p>
+                        <p><small>We take care to make sure that all information that appears on this website is accurate and up-to-date, however, errors and omissions may occur, so you should not take the accuracy of the information and material for granted or rely upon it as a statement or representation of fact. Some products may only be available from selected providers. Final insurance policy premiums are determined by the underwriting insurance company following successful application, and your premiums may vary depending on your own individual circumstance and requirements</small></p>
+                        <p><small>Registered office address : Enterprise House The Courtyard, Old Courthouse Road, Bromborough, Wirral, CH62 4UE</small></p>
                     </div>
-                    <div class="col-md-8 white-text copy-links text-right"><small><span><nuxt-link to="/privacy">Privacy</nuxt-link></span> | <span><nuxt-link to="/terms-and-conditions">Terms &amp; Conditions</nuxt-link></span> | <span><nuxt-link to="/copyright">Copyright Notices</nuxt-link></span></small></div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-12 white-text">
-                        <p><small>Forever Protect Over 50’s is a trading style of Veriform Ltd.</small></p>
-                        <p><small>Subject to our terms and conditions we will process the information you provide us and may pass this on to our named partners for marketing purposes.</small></p>
-                        <p><small>Veriform Ltd is a company registered in England & Wales, registration number 7195400 and registered at 145/147 Hatfield Road, St. Albans, Hertfordshire, AL1 4JY.</small></p>
-                        <p><small>Forever Protect Over 50’s is not an insurance company nor able to offer any advice into any financial services regulated products. Any terms and conditions may vary for all of our partners.</small></p>
-                        <p><small>We do not charge a commission for this service, but we do receive a fee directly from our partners following successful introductions from this website. Any information we provide is for the purposes of illustrating the products promoted on this site only and should not be read as financial advice.</small></p>
+                    <div class="col-md-5 white-text">
+                        <p><small>Protection registration number is : Z314122X</small></p>
+                        <p><small>All trademarks, trade names, or logos are the property of their respective owners, and Forever Protect is not affiliated with any individual insurer or brand, and are included in the panel of insurance providers that our partners compare.</small></p>
+                        <p><small>Please note that some brokers we work with may not provide quotes from all the insurers featured on our website.</small></p>
+                        <p><small>Copyright (c) {{year}} Forever Protect. All rights reserved.</small></p>
+                        <p>
+                            <nuxt-link to="/privacy">Privacy</nuxt-link>
+                            <nuxt-link to="/terms-and-conditions">Terms &amp; Conditions</nuxt-link>
+                        </p>
+                        <a href="01619296997">0161 929 6997</a>
                     </div>
                 </div>
             </div>
@@ -33,8 +34,7 @@
 <script>
 export default {
     data() {
-        return {
-        }
+        return {}
     },
     computed: {
         year() {

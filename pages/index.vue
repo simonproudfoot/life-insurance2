@@ -2,8 +2,8 @@
     <div>
         <header style="height: 320px" class="primary text-center white--text py-4">
             <v-container>
-                <h1 class="display-1 pt-6">Compare Over 50 Life Insurance Quotes</h1>
-                <h3>Affordable premiums from just £1.15 per week*</h3>
+                <h1 class="display-1 pt-6">Compare Life Insurance Quotes</h1>
+                <h3>Affordable premiums from just £1.62 per week*</h3>
             </v-container>
         </header>
         <v-container>
