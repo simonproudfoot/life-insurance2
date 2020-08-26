@@ -22,49 +22,26 @@
                 <v-row class="mt-8 justify-space-around justify-sm-space-between">
                     <v-col class="text-center mb-4 mb-md-0" cols="10" sm="6" md="3">
                         <div class="px-3">
-                            <img width="60" src="/icons/020-prototype.svg">
+                            <img width="60" src="/020-prototype.svg">
                             <h3 class="secondary--text" style="line-height: 26px">Free No-Obligation Quote</h3>
                         </div>
                     </v-col>
                     <v-col class="text-center pt-md-10 mb-4 mb-md-0" cols="10" sm="6" md="3">
                         <div class="px-3">
-                            <img width="60" src="/icons/004-clock.svg">
+                            <img width="60" src="/004-clock.svg">
                             <h3 class="secondary--text" style="line-height: 26px">Cover From £1.62 per week</h3>
                         </div>
                     </v-col>
                     <v-col class="text-center" cols="10" sm="6" md="3">
                         <div class="px-3">
-                            <img width="60" src="/icons/006-manager.svg">
+                            <img width="60" src="/006-manager.svg">
                             <h3 class="secondary--text" style="line-height: 26px">Protect loved ones</h3>
                         </div>
                     </v-col>
                 </v-row>
             </v-container>
         </section>
-        <!-- <section class="lightgrey">
-                <v-container>
-                    <v-row align="center">
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/x1200px-Legal__General_logo.svg_-e1552995755403.png.pagespeed.ic.uJnUAbBEwm.png"></v-img>
-                        </v-col>
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xLiverpool-Vic.png.pagespeed.ic.SCcAclKXyP.png"></v-img>
-                        </v-col>
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xvitality-logo-300x164.png.pagespeed.ic.iLqrgu_A9l.png"></v-img>
-                        </v-col>
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xbarclays-logo-1-1-e1552651231625.png.pagespeed.ic.MGarkWd2gz.png"></v-img>
-                        </v-col>
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2018/11/xZurich_Logo_new.svg_-e1542193615983.png.pagespeed.ic.XnhxS1HDjd.png"></v-img>
-                        </v-col>
-                        <v-col>
-                            <v-img width="80" class="mx-auto" src="https://www.foreverprotect.com/wp-content/uploads/2019/02/xAEGON_logo.svg_-e1552648943402.png.pagespeed.ic.3V88J0fGHR.png"></v-img>
-                        </v-col>
-                    </v-row>
-                </v-container>
-            </section> -->
+
         <section style="background: #0b3868 url('/blue-back1.jpg') left top no-repeat">
             <v-container>
                 <v-row>
@@ -88,6 +65,19 @@
                                         to think about, including critical illness cover and whole of life insurance.<br/><br/>
                                     </v-expansion-panel-content>
                                 </v-expansion-panel>
+    
+                                <v-expansion-panel>
+                                    <v-expansion-panel-header elevation="0">
+                                        <h4>What are the main types of Life Insurance cover?</h4>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                        One of the most popular types of life insurance is called ‘term’ insurance. This type of policy pays out a set amount, either as a lump sum or a regular income if you pass away within an agreed period (or ‘term’).<br/><br/>                                    The two main types of term life insurance cover are: level-term insurance and decreasing cover insurance.<br/><br/> Level-term insurance covers people for a period of time and typically offers a fixed lump sum of money
+                                        to a dependent if you pass away during that time period. You could choose this to ensure your financial commitments, such as childcare costs, can still be paid.<br/><br/> Decreasing cover is a type of insurance that’s
+                                        often (but not always) bought to clear a specified debt that itself decreases over time. This type of cover is often taken out to cover mortgage repayment costs.<br/><br/> There are many other types of life insurance
+                                        to think about, including critical illness cover and whole of life insurance.<br/><br/>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+    
                                 <v-expansion-panel>
                                     <v-expansion-panel-header elevation="0">
                                         <h4>Which Life Cover is right for me? </h4>
@@ -118,11 +108,22 @@
                                         <h4>When should I think about getting Life Insurance? </h4>
                                     </v-expansion-panel-header>
                                     <v-expansion-panel-content>
-                                        Whatever your age, as an adult it’s always a good time to start thinking about life insurance. In particular people with loans, mortgages and financial dependents should consider getting a life insurance policy.<br/><br/>                                    Although it’s common to get a new policy after a major life event – such as having a baby or moving house – it can be a good idea to buy life insurance sooner rather than later. That’s because providers tend to think
-                                        of younger people as less risky, as they’re more likely to be healthy and therefore less likely to claim. So, you could be offered a cheaper insurance premium.<br/><br/> There you have it. Whatever stage of adult life
-                                        you’re at, there isn’t a better time than now to shop around for peace of mind. Start a quote for life insurance today.<br/><br/>
+                                        Whatever your age, as an adult it’s always a good time to start thinking about life insurance. In particular people with loans, mortgages and financial dependents should consider getting a life insurance policy. Although it’s common to get a new policy
+                                        after a major life event – such as having a baby or moving house – it can be a good idea to buy life insurance sooner rather than later. That’s because providers tend to think of younger people as less risky, as they’re
+                                        more likely to be healthy and therefore less likely to claim. So, you could be offered a cheaper insurance premium. There you have it. Whatever stage of adult life you’re at, there isn’t a better time than now to shop
+                                        around for peace of mind. Start a quote for life insurance today.<br/><br/>
                                     </v-expansion-panel-content>
                                 </v-expansion-panel>
+
+                                 <v-expansion-panel>
+                                    <v-expansion-panel-header elevation="0">
+                                        <h4>Should I get a monthly or annual plan? </h4>
+                                    </v-expansion-panel-header>
+                                    <v-expansion-panel-content>
+                                       That’s really up to you and will depend on your circumstances when you’re looking to buy life insurance cover. Paying annually can be a cheaper option as interest could be charged on monthly instalments – so you could save some cash if you can afford the up-front payment. Before deciding on any type of payment plan, you should work out whether or not you’re able to pay in a sufficient amount to cover the duration of your policy.<br/><br/>
+                                    </v-expansion-panel-content>
+                                </v-expansion-panel>
+    
                             </v-expansion-panels>
                         </v-col>
                     </v-row>
@@ -206,30 +207,33 @@
                 <v-row class="mt-8 justify-space-around justify-sm-space-between">
                     <v-col class="text-center mb-4 mb-md-0" cols="10" sm="6" md="4">
                         <div class="px-3">
-                            <img width="60" src="/icons/heart.svg">
+                            <img width="60" src="/heart.svg">
                             <h3 class="secondary--text mb-5" style="line-height: 26px">Life Insurance</h3>
                             <p><small>Life insurance is an easy and straightforward way to ensure that the financial needs of your family or any other dependents are met. Couples without dependents will usually still wish to protect their partner, and some people simply want an inexpensive policy which will ensure that their costs and outgoings can be covered.</small></p>
                         </div>
                     </v-col>
                     <v-col class="text-center  mb-4 mb-md-0" cols="10" sm="6" md="4">
                         <div class="px-3">
-                            <img width="60" src="/icons/steth.svg">
+                            <img width="60" src="/steth.svg">
                             <h3 class="secondary--text mb-5" style="line-height: 26px">Critical Illness Cover</h3>
                             <p><small>Critical illness cover can be bought either as a standalone product or in combination with life insurance. Critical illness cover allows you to continue making your payments if you are diagnosed with a qualifying illness listed on your policy. The policy can help your family cope financially if you were to become seriously ill.</small></p>
                         </div>
                     </v-col>
                     <v-col class="text-center" cols="10" sm="6" md="4">
                         <div class="px-3">
-                            <img width="60" src="/icons/house.svg">
+                            <img width="60" src="/house.svg">
                             <h3 class="secondary--text mb-5" style="line-height: 26px">Mortgage Protection Cover</h3>
                             <p><small>Mortgage Payment Protection Insurance (MPPI) is designed to cover the cost of your mortgage payments in the event that an accident, sickness or unemployment stops you from working. Your mortgage is a big commitment. Leaving your loved ones to face the risk of not being able to continue the mortgage payments is well worth protecting against.</small></p>
                         </div>
                     </v-col>
+    
                 </v-row>
             </v-container>
         </section>
         <section class="primary text-center">
-            <v-btn class="secondary"  x-large flat rounded @click="toTop()">Apply today</v-btn>
+            <v-btn class="secondary" x-large rounded @click="toTop()">Apply today
+                <v-icon>mdi-chevron-double-up</v-icon>
+            </v-btn>
         </section>
     </div>
 </template>

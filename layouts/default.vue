@@ -20,11 +20,12 @@
                         <p><small>All trademarks, trade names, or logos are the property of their respective owners, and Forever Protect is not affiliated with any individual insurer or brand, and are included in the panel of insurance providers that our partners compare.</small></p>
                         <p><small>Please note that some brokers we work with may not provide quotes from all the insurers featured on our website.</small></p>
                         <p><small>Copyright (c) {{year}} Forever Protect. All rights reserved.</small></p>
+                        <p><small>Example of reviews have been permitted from a partner Everyday Insurance, rated 4.96 of 5 (reviews). *£1.62 per week based on a 30-year-old non-smoker taking out £185,000 level term cover over 20 years (L&G) - Prices correct as of January 2020</small></p>
                         <p>
                             <nuxt-link to="/privacy">Privacy</nuxt-link>
                             <nuxt-link to="/terms-and-conditions">Terms &amp; Conditions</nuxt-link>
                         </p>
-                        <a href="01619296997">0161 929 6997</a>
+                        <a href="tel:01619296997">0161 929 6997</a>
                     </div>
                 </div>
             </div>
@@ -33,9 +34,6 @@
 </template>
 <script>
 export default {
-    data() {
-        return {}
-    },
     computed: {
         year() {
             return new Date().getFullYear()

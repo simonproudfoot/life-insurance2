@@ -86,9 +86,9 @@
                         <v-row no-gutters>
                             <v-col cols="4" class="px-1">
                                 <v-btn height="80" x-large block color="accent" @click="stepInner++, questions[key] = 'level term', toTop()">
-                                    <svg style="width:36px;height:36px" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" d="M12,2A9,9 0 0,1 21,11H13V19A3,3 0 0,1 10,22A3,3 0 0,1 7,19V18H9V19A1,1 0 0,0 10,20A1,1 0 0,0 11,19V11H3A9,9 0 0,1 12,2Z" />
-                                            </svg>
+                                    <svg style="width:36px; height:36px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12,2A9,9 0 0,1 21,11H13V19A3,3 0 0,1 10,22A3,3 0 0,1 7,19V18H9V19A1,1 0 0,0 10,20A1,1 0 0,0 11,19V11H3A9,9 0 0,1 12,2Z" />
+                                    </svg>
                                 </v-btn>
                                 <p class="button-label text-center mt-2">Level term</p>
                             </v-col>
@@ -303,7 +303,7 @@
                  <v-alert class="mt-5" v-if="submitError" type="error">
                     {{submitError}}
                  </v-alert>
-                 <p class="mt-5">By clicking <i>"Get my quotes"</i> you agree to be contacted by email or telephone by an FCA authorised insurance firm and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
+                 <p class="mt-5">By clicking <i>"Get my free quote"</i> you agree to be contacted by email or telephone by an FCA authorised insurance firm and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
                 <!-- 
                 <v-checkbox v-model="contactTicked">
                         <template v-slot:label>
