@@ -216,29 +216,7 @@
                          <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
                     </div>
                 </v-form>
-            </transition>
-            <!-- Email -->
-            <transition name="fade">
-                <v-form v-on:submit.prevent v-if="key == 'email' && stepInner == index" ref="form" v-model="isValid">
-                    <div class="formSectionInner formSectionInner--narrow">
-                        <h2 class="mb-5 mt-3 text-center">Email address</h2>
-                        <v-text-field type="email" outlined single-line label="Email" :rules="validationRules.email" v-model="questions[key]"></v-text-field>
-                        <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
-                    </div>
-                </v-form>
-            </transition>
-            <!-- Tel -->
-           <transition name="fade">
-                <v-form v-on:submit.prevent v-if="key == 'phone' && stepInner == index" ref="form" v-model="isValid" >
-                    <div class="formSectionInner formSectionInner--narrow telephone">
-                        <h2 class="mb-5 text-center">Contact number</h2>
-                        <v-text-field :hint="telSearching ? 'Verifying telephone number' : null"  ref="telephoneField" type="tel"  single-line label="Telephone number" v-model="questions[key]"></v-text-field>
-                        <p v-if="phoneValidated == false">Invalid UK telephone number</p>
-                        <v-btn color="accent" x-large block v-if="isLocalHost" @click="stepInner++, toTop()">localhost skip ></v-btn>
-                        <v-btn :loading="telSearching" :disabled="!questions[key]" color="accent" x-large block class="btn-ntx" @click="phoneValidate(), toTop()">Next</v-btn>
-                    </div>
-                </v-form>
-            </transition>
+            </transition>          
             <!-- Address  -->
             <transition name="fade">
             <v-form v-on:submit.prevent transition="fade-transition" v-if="key == 'address' && stepInner == index"  :rule="questions[key].length !== 0 && questions[key].line_1 && questions[key].postcode && questions[key].post_town ? isValid = true: isValid = false" >
@@ -269,56 +247,48 @@
                             <v-divider></v-divider>
                         </v-card>
                     </v-dialog>
-                <template v-if="questions[key]">
-                    <v-row class="addressDeets">
-                        <v-col cols="12" class="py-0">
-                            <v-text-field outlined type="text" v-model="questions[key].line_1" single-line label="Address line 1" />
-                        </v-col>
-                        <v-col cols="12" class="py-0">
-                            <v-text-field outlined type="text" v-model="questions[key].line_2" single-line label="Address line 2" />
-                        </v-col>
-                        <v-col cols="12" class="py-0">
-                            <v-text-field outlined type="text" v-model="questions[key].line_3" d single-line label="Address line 3" />
-                        </v-col>
-                        <v-col cols="12" class="py-0">
-                            <v-text-field outlined type="text" v-model="questions[key].post_town" d single-line label="Town/city" />
-                        </v-col>
-                        <v-col cols="12" class="py-0">
-                            <v-text-field disabled outlined type="text" v-model="questions[key].postcode" single-line label="Postcode" />
-                        </v-col>
-                    </v-row>
-                </template>
+                    <template v-if="questions[key]">
+                        <v-row class="addressDeets">
+                            <v-col cols="12" class="py-0">
+                                <v-text-field dense outlined type="text" v-model="questions[key].line_1" single-line label="Address line 1" />
+                            </v-col>
+                            <v-col cols="12" class="py-0">
+                                <v-text-field dense outlined type="text" v-model="questions[key].line_2" single-line label="Address line 2" />
+                            </v-col>
+                            <v-col cols="12" class="py-0">
+                                <v-text-field dense outlined type="text" v-model="questions[key].line_3" d single-line label="Address line 3" />
+                            </v-col>
+                            <v-col cols="12" class="py-0">
+                                <v-text-field dense outlined type="text" v-model="questions[key].post_town" d single-line label="Town/city" />
+                            </v-col>
+                            <v-col cols="12" class="py-0">
+                                <v-text-field dense disabled outlined type="text" v-model="questions[key].postcode" single-line label="Postcode" />
+                            </v-col>
+                        </v-row>
+                    </template>
                 <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
                 </div>
             </v-form>
             </transition>
+         <!-- Email & tel - Final -->
             <transition name="fade">
-            <div v-if="key == 'success' && stepInner == index" class="formSectionInner formSectionInner--narrow">
-                <h1 class="text-center">Almost there, <span style="text-transform: capitalize">{{questions.name[0]}}</span></h1>
-                <h2 class="mb-5">Please submit to get your free quote.</h2>
-                <v-btn accent class="submitButton" height="80" x-large block color="success" @click="postLead" :disabled="sending" :loading="sending" >Get my Free Quote
-                  <v-icon lass="mb-0 text-white" large>mdi-chevron-double-right</v-icon>
-                </v-btn>
-                <div v-if="sending">Please wait whilst we submit your details</div>
-                 <v-alert class="mt-5" v-if="submitError" type="error">
-                    {{submitError}}
-                 </v-alert>
-                 <p class="mt-5">By clicking <i>"Get my free quote"</i> you agree to be contacted by email or telephone by an FCA authorised insurance firm and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p>
-                <!-- 
-                <v-checkbox v-model="contactTicked">
-                        <template v-slot:label>
-                            <div> would like to use email, text and display notifications to let you know about <b>forever-protect-over-50.com</b> products and services. If you do not want to receive these, un-tick this box.
-                                <v-tooltip bottom>
-                                    <template v-slot:activator="{ on }">
-                                    <a target="_blank"  href="http://vuetifyjs.com" @click.stop v-on="on" ></a>
-                        </template>
-                        </v-tooltip>
+                <v-form v-on:submit.prevent v-if="key == 'email' && stepInner == index || key == 'phone' && stepInner == index" ref="form" v-model="isValid">
+                    <div class="formSectionInner formSectionInner--narrow">
+                        <h2 class="mb-5 mt-3 text-center">Email address</h2>
+                        <v-text-field id="email" type="email" outlined label="Email" validate-on-blur :rules="validationRules.email" v-model="questions[key]"></v-text-field>
+                        <h2 class="mb-5 text-center">Contact number</h2>
+                        <v-text-field id="telephoneField" :rules="[validationRules.required]" pattern="[0-9]*" ref="telephoneField" type="tel" outlined validate-on-blur label="Telephone number" v-model="questions['phone']"></v-text-field>
+                        <v-btn accent class="submitButton" height="80" x-large block color="success" @click="submit()" :disabled="sending" :loading="sending">Get my <br v-if="$vuetify.breakpoint.xs">Free Quote
+                            <v-icon class="mb-0 text-white ml-2" large>mdi-chevron-double-right</v-icon>
+                        </v-btn>
+                        <div v-if="sending">Please wait whilst we submit your details</div>
+                        <v-alert class="mt-5" v-if="submitError" type="error">
+                            {{submitError}}
+                        </v-alert>
+                        <p class="mt-5"><small>By clicking <i>"Get my free quote"</i> you agree to be contacted by email or telephone by an FCA authorised insurance firm and confirm that you have read and agreed to our <a href="/terms-and-conditions" target="_blank">Terms & Conditions</a> and <a href="/privacy" target="_blank">Privacy Policy</a></small></p>
                     </div>
-                </template>
-                </v-checkbox> 
-                -->
-            </div>
-        </transition>
+                </v-form>
+            </transition>
         </div>
         <v-btn :disabled="sending" v-if="stepInner !== 0" text @click="stepInner--, toTop()" block class="btnBck"><v-icon class="mdi-36px">mdi-menu-left-outline</v-icon>Back</v-btn>
     </div>
@@ -417,7 +387,6 @@ export default {
                 "1,300,000",
                 "1,400,000",
                 "1,500,000",
-
             ],
             searchTelephone: '',
             telSearching: false,
@@ -428,7 +397,7 @@ export default {
             titles: ['Mr', 'Mrs', 'Miss', 'Ms'],
             addressList: [],
             sCount: 0,
-            stepInner: 0, // must start at 0
+            stepInner: 9, // must start at 0
             current: 0,
             numberOfsections: 0,
             isValid: false,
@@ -453,43 +422,28 @@ export default {
         }
     },
     methods: {
-
          submit() {
-      var total = Object.keys(this.questions.aboutYou).length;
-      var count = 0;
-      var emailField = document.getElementById('email');
-      var telephoneField = document.getElementById('telephoneField');
-
-      Object.values(this.questions.aboutYou).forEach(element => {
-        element && element.length ? count++ : null
-      });
-      // Check all fields are complete
-      if (total == count) {
-        this.sending = true
-        // Check email
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.questions.aboutYou.email)) {
-          emailField.style.color = 'inherit';
-          // Validate number
-          if (this.phoneValidate() == true) {
-            telephoneField.style.color = 'inherit';
-            this.postLead()
-          } else {
-            telephoneField.style.color = 'red';
-            alert('Invalid UK telephone number')
-            this.sending = false
-          }
-        } else {
-          alert('This is not a valid Email address')
-          emailField.style.color = 'red';
-          this.sending = false
-        }
-      } else {
-        this.vWarning()
-        this.sending = false
-      }
-    },
-
-    
+            var emailField = document.getElementById('email');
+            // Check all fields are complete
+            if (this.isValid) {
+                this.sending = true
+                // Check email
+                if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.questions.email)) {
+                emailField.style.color = 'inherit';
+                    this.phoneValidate()
+               } else {
+                alert('This is not a valid Email address')
+                emailField.style.color = 'red';
+                this.sending = false
+                }
+            } else {
+                this.vWarning()
+                this.sending = false
+            }
+        },
+        vWarning(){
+            alert('Please complete all of the qustions to continue')
+        },
         hasPartner() {
             this.questions.id_like_quotes_for = 'myself_and_partner'
         },
@@ -526,7 +480,6 @@ export default {
             this.$vuetify.goTo(0)
         },
        phoneValidate() {
-            this.telSearching = true
             console.log('searching:' + this.questions.phone);
             this.$axios.$post('https://webservices.data-8.co.uk/TelephoneLineValidation/IsValidAdvanced.json?key=CX3N-IDXM-XEFB-73WE', {
                     "number": this.questions.phone,
@@ -535,25 +488,21 @@ export default {
                     }
                 })
                 .then((response) => {
-                    if (response.Result == 'Invalid' || response.Result == 'TemporaryInvalid') {
+                    if (response.Result == 'Invalid') {
                         this.isValid = false
                         this.phoneValidated = false
-                        this.telError = 'This is not a valid UK number'
+                        alert('This is not a valid UK number')
+                        this.sending = false
                     } else {
                         this.phoneValidated = true
-                        this.stepInner++
-                        this.isValid = true
+                        this.postLead()
                     }
                     this.telSearching = false
                 })
                 .catch((error) => {
-                    this.isValid = false
-                    this.telError = 'This is not a valid UK number'
-                    setTimeout(() => {
-                        this.telError = '';
-                    }, 2000);
                     console.log(error);
-                    this.telSearching = false
+                    this.sending = false
+                    alert('Error, please check connection and try again')
                 });
         },
         encodeDataToURL(data) {
@@ -585,6 +534,7 @@ export default {
                 console.log(response.code);
                 window.location.replace('/success')
             }).catch(function(error) {
+                this.sending = false
                 console.log(error);
             });
         },
@@ -682,33 +632,27 @@ export default {
     }
 }
 </script>
-
 <style scoped lang="scss">
 .button-label {
     @media only screen and (max-width: 600px) {
         font-size: 15px;
     }
 }
-
 .btn-ntx {
     color: #fff;
     font-family: $heading-font-family !important;
 }
-
 .btnBck .v-icon {
     color: orange !important;
 }
-
 .formSectionInner .v-btn {
     font-family: $heading-font-family !important;
     font-size: 1em;
     font-weight: bolder;
 }
-
 .v-btn .v-icon {
     color: #fff;
 }
-
 .theForm {
     overflow: hidden;
     background-color: #fff;
@@ -726,34 +670,28 @@ export default {
         margin: -150px auto 0 auto;
     }
 }
-
 .fade-enter-active,
 .v-stepper__content {
     transition: all .3s ease-in-out !important;
 }
-
 .v-stepper {
     box-shadow: none !important;
     box-shadow: 0 !important;
 }
-
 .fade-enter-active,
 .fade-leave-active,
 .v-stepper__content {
     opacity: 1;
     transform: translateY(0)
 }
-
 .fade-enter {
     transition-delay: 3s
 }
-
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
     transform: translateY(10px)
 }
-
 .formSectionInner {
     @media only screen and (max-width: 600px) {
         padding: 1em;
@@ -762,7 +700,6 @@ export default {
         padding: 1em;
     }
 }
-
 .addressLookup {
     background-color: #fff;
     padding: 0.5rem 1rem;
@@ -783,43 +720,35 @@ export default {
     padding: 13px 10px;
     box-shadow: 0 2px 3px #00000014;
 }
-
 .addressDeets {
     .v-text-field__details {
         display: none !important;
     }
 }
-
 .addressField-0 {
     width: 40%;
     display: inline-block;
 }
-
 .addressField-1 {
     width: 100%;
     display: inline-block;
 }
-
 .addressField-2 {
     width: 60%;
     display: inline-block;
     padding-right: 12px;
 }
-
 .addressField-3 {
     width: 40%;
     display: inline-block;
 }
-
 .trustLogos,
 .btnBck {
     border-top: 1px #e3e3e3 solid;
 }
-
 .v-text-field__details {
     min-height: 0;
 }
-
 .v-text-field__details {
     margin-bottom: 0 !important;
     display: none !important;
