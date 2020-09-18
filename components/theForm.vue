@@ -228,14 +228,14 @@
                 </v-form>
             </transition>
             <!-- Tel -->
-            <transition name="fade">
-                <v-form v-on:submit.prevent v-if="key == 'phone' && stepInner == index" ref="form" v-model="isValid" :rules="phoneValidated ? isValid = true : isValid=false">
+           <transition name="fade">
+                <v-form v-on:submit.prevent v-if="key == 'phone' && stepInner == index" ref="form" v-model="isValid" >
                     <div class="formSectionInner formSectionInner--narrow telephone">
-                        <h2 class="mb-5 mt-3 text-center">Contact number</h2>
-                        <v-text-field outlined :hint="telSearching ? 'Verifying telephone number' : null" :append-icon="telSearching ? 'mdi-loading' : 'mdi-loadingf'"  ref="telephoneField" type="tel"  single-line label="Telephone number" v-model="questions[key]" @keyup="phoneValidate"></v-text-field>
+                        <h2 class="mb-5 text-center">Contact number</h2>
+                        <v-text-field :hint="telSearching ? 'Verifying telephone number' : null"  ref="telephoneField" type="tel"  single-line label="Telephone number" v-model="questions[key]"></v-text-field>
                         <p v-if="phoneValidated == false">Invalid UK telephone number</p>
-                        <v-btn v-if="isLocalHost" @click="stepInner++, toTop()">local host skip ></v-btn>
-                        <v-btn :disabled="!isValid" color="accent" x-large block class="btn-ntx" @click="stepInner++, toTop()">Next</v-btn>
+                        <v-btn color="accent" x-large block v-if="isLocalHost" @click="stepInner++, toTop()">localhost skip ></v-btn>
+                        <v-btn :loading="telSearching" :disabled="!questions[key]" color="accent" x-large block class="btn-ntx" @click="phoneValidate(), toTop()">Next</v-btn>
                     </div>
                 </v-form>
             </transition>
@@ -323,7 +323,6 @@
         <v-btn :disabled="sending" v-if="stepInner !== 0" text @click="stepInner--, toTop()" block class="btnBck"><v-icon class="mdi-36px">mdi-menu-left-outline</v-icon>Back</v-btn>
     </div>
 </template>
-
 <script>
 import Vue from 'vue';
 export default {
@@ -421,6 +420,7 @@ export default {
 
             ],
             searchTelephone: '',
+            telSearching: false,
             searchPostcode: '',
             phoneValidated: null,
             contactTicked: true,
@@ -453,17 +453,48 @@ export default {
         }
     },
     methods: {
+
+         submit() {
+      var total = Object.keys(this.questions.aboutYou).length;
+      var count = 0;
+      var emailField = document.getElementById('email');
+      var telephoneField = document.getElementById('telephoneField');
+
+      Object.values(this.questions.aboutYou).forEach(element => {
+        element && element.length ? count++ : null
+      });
+      // Check all fields are complete
+      if (total == count) {
+        this.sending = true
+        // Check email
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.questions.aboutYou.email)) {
+          emailField.style.color = 'inherit';
+          // Validate number
+          if (this.phoneValidate() == true) {
+            telephoneField.style.color = 'inherit';
+            this.postLead()
+          } else {
+            telephoneField.style.color = 'red';
+            alert('Invalid UK telephone number')
+            this.sending = false
+          }
+        } else {
+          alert('This is not a valid Email address')
+          emailField.style.color = 'red';
+          this.sending = false
+        }
+      } else {
+        this.vWarning()
+        this.sending = false
+      }
+    },
+
+    
         hasPartner() {
             this.questions.id_like_quotes_for = 'myself_and_partner'
-            //this.addItem('questions', 'has_your_partner_smoked_in_the_last_12_months', '', 2);
-            //this.addItem('questions', 'partners_dob', [], 4);
-            //this.addItem('questions', 'partnersGender', '', 6);
         },
         isSingle() {
             this.questions.id_like_quotes_for = 'myself'
-            //this.removeItem('has_your_partner_smoked_in_the_last_12_months')
-            //this.removeItem('partners_dob')
-            //this.removeItem('partnersGender')
         },
         removeItem(q) {
             // finds the index
@@ -484,7 +515,6 @@ export default {
         requestAddress(qKey) {
             this.$axios.$get('https://api.ideal-postcodes.co.uk/v1/postcodes/' + this.searchPostcode.replace(/\s/g, '') + '?api_key=ak_jr1wo74l0sgSldKnJeTPAEo5QpHxw')
                 .then((response) => {
-                    // console.log(response.result);
                     this.popUp = true
                     this.addressList = response.result
                 })
@@ -495,30 +525,36 @@ export default {
         toTop() {
             this.$vuetify.goTo(0)
         },
-        phoneValidate() {
-            if (this.questions.phone.length > 10) {
-                this.telSearching = true
-                console.log('searching:' + this.questions.phone);
-                this.$axios.$post('https://webservices.data-8.co.uk/TelephoneLineValidation/IsValidAdvanced.json?key=CX3N-IDXM-XEFB-73WE', {
-                        "number": this.questions.phone,
-                        "options": {
-                            "UseMobileValidation": true
-                        }
-                    })
-                    .then((response) => {
-                        console.log(response);
-                        response.Result == 'Invalid' || response.Result == 'TemporaryInvalid' ? this.phoneValidated = false : this.phoneValidated = true
-                        this.telSearching = false
-                    })
-                    .catch((error) => {
+       phoneValidate() {
+            this.telSearching = true
+            console.log('searching:' + this.questions.phone);
+            this.$axios.$post('https://webservices.data-8.co.uk/TelephoneLineValidation/IsValidAdvanced.json?key=CX3N-IDXM-XEFB-73WE', {
+                    "number": this.questions.phone,
+                    "options": {
+                        "UseMobileValidation": true
+                    }
+                })
+                .then((response) => {
+                    if (response.Result == 'Invalid' || response.Result == 'TemporaryInvalid') {
+                        this.isValid = false
+                        this.phoneValidated = false
                         this.telError = 'This is not a valid UK number'
-                        setTimeout(() => {
-                            this.telError = '';
-                        }, 2000);
-                        console.log(error);
-                        this.telSearching = false
-                    });
-            }
+                    } else {
+                        this.phoneValidated = true
+                        this.stepInner++
+                        this.isValid = true
+                    }
+                    this.telSearching = false
+                })
+                .catch((error) => {
+                    this.isValid = false
+                    this.telError = 'This is not a valid UK number'
+                    setTimeout(() => {
+                        this.telError = '';
+                    }, 2000);
+                    console.log(error);
+                    this.telSearching = false
+                });
         },
         encodeDataToURL(data) {
             return Object.keys(data).map(value => `${value}=${encodeURIComponent(data[value])}`).join('&');
@@ -679,7 +715,7 @@ export default {
     border-radius: 8px;
     box-shadow: 0 1px 7px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .37);
     max-width: 600px;
-    @media screen and (min-width: 400px) and (max-width:600px) {
+    @media screen and (max-width:600px) {
         margin: -70px auto 0 auto;
         width: 95%;
     }

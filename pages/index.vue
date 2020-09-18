@@ -226,7 +226,6 @@
                             <p><small>Mortgage Payment Protection Insurance (MPPI) is designed to cover the cost of your mortgage payments in the event that an accident, sickness or unemployment stops you from working. Your mortgage is a big commitment. Leaving your loved ones to face the risk of not being able to continue the mortgage payments is well worth protecting against.</small></p>
                         </div>
                     </v-col>
-    
                 </v-row>
             </v-container>
         </section>

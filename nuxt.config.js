@@ -25,6 +25,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@700&display=swap' }
+    ],
+    script: [
+      { hid: 'CookieDeclaration', 'data-cbid' : 'a01a09ef-f0f0-45d4-b516-bd20342681d3', 'data-blockingmode':"auto",  id: 'CookieDeclaration', src: 'https://consent.cookiebot.com/uc.js', async: true }
     ]
   },
   /*

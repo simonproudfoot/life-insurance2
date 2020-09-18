@@ -24,6 +24,7 @@
                         <p>
                             <nuxt-link to="/privacy">Privacy</nuxt-link>
                             <nuxt-link to="/terms-and-conditions">Terms &amp; Conditions</nuxt-link>
+                            <nuxt-link to="/cookie-policy">Cookie policy</nuxt-link>
                         </p>
                         <a href="tel:01619296997">0161 929 6997</a>
                     </div>
